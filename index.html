@@ -15,9 +15,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <title>*|MC:SUBJECT|*</title>
 
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
         table {
             border-collapse: collapse;
         }
@@ -47,6 +53,15 @@
 			font-weight: inherit !important;
 			line-height: inherit !important;
 		}
+
+        img {
+            max-width: 425px;
+        }
+
+        td#show-button-left,
+        td#show-button-right {
+            padding-bottom: 30px;
+        }
 
         /*
 	        @tab Page
@@ -113,7 +128,7 @@
             @section Preheader Style
         */
             #preheader {
-                /*@editable*/background-color: #000000;
+                /*@editable*/background-color: #5fb284;
                 /*@editable*/background-image: none;
                 /*@editable*/background-repeat: no-repeat;
                 /*@editable*/background-position: center;
@@ -136,7 +151,7 @@
                 /*@editable*/font-weight: 400;
                 /*@editable*/line-height: 150%;
                 /*@editable*/text-align: center;
-                /*@editable*/color: #ffffff;
+                /*@editable*/color: #000000;
                 /*@editable*/margin-top: 0;
                 /*@editable*/margin-bottom: 0;
             }
@@ -146,7 +161,7 @@
             @section Preheader Link
         */
             #preheader a, #preheader p a {
-                /*@editable*/color: #ffffff;
+                /*@editable*/color: #000000;
                 /*@editable*/font-weight: normal;
                 /*@editable*/text-decoration: underline;
                 /*@editable*/text-align: center;
@@ -157,7 +172,7 @@
             @section Header Style
         */
             #header {
-                /*@editable*/background-color: #ffffff;
+                /*@editable*/background-color: #1c1c1c;
                 /*@editable*/background-image: none;
                 /*@editable*/background-position: center;
                 /*@editable*/background-size: cover;
@@ -182,12 +197,16 @@
             @section Header Heading
         */
             #header, #header h1 {
-                /*@editable*/font-family: 'Open Sans', sans-serif;
-                /*@editable*/font-size: 21px;
+                /*@editable*/font-family: 'Montserrat', sans-serif;
+                /*@editable*/font-size: 23px;
                 /*@editable*/font-weight: 700;
                 /*@editable*/line-height: 150%;
                 /*@editable*/text-align: center;
-                /*@editable*/color: #000000;
+                /*@editable*/color: #5fb284;
+                /*@editable*/padding-left: 0px;
+                /*@editable*/padding-top: 20px;
+                /*@editable*/padding-right: 0px;
+                /*@editable*/padding-bottom: 0px
             }
 
         /*
@@ -195,6 +214,44 @@
             @section Header Text
         */
             #header p {
+                /*@editable*/font-family: 'Open Sans', sans-serif;
+                /*@editable*/font-size: 15px;
+                /*@editable*/font-weight: 500;
+                /*@editable*/line-height: 150%;
+                /*@editable*/text-align: center;
+                /*@editable*/color: #5fb284;
+                /*@editable*/margin-left: 20px;
+                /*@editable*/margin-right: 20px;
+                /*@editable*/padding-left: 15px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-right: 15px;
+                /*@editable*/padding-bottom: 10px;
+                /*@editable*/border: 3px solid #5fb284;
+                /*@editable*/background-color: #1c1c1c;
+            }
+
+            /*
+                @tab Body - Movie Section
+                @section Body Style - Movie Section
+            */
+            #movie-table {
+                /*@editable*/background-color: #f4f4f6;
+                /*@editable*/background-image: none;
+                /*@editable*/background-position: center;
+                /*@editable*/background-size: cover;
+                /*@editable*/background-repeat: no-repeat;
+                /*@editable*/text-align: center;
+                /*@editable*/border-top: 0px;
+                /*@editable*/border-bottom: 0px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-bottom: 10px;
+            }
+
+            /*
+                @tab Body - Movie Section
+                @section Body Text - Movie Section
+            */
+            #movie-table p {
                 /*@editable*/font-family: 'Helvetica';
                 /*@editable*/font-size: 13px;
                 /*@editable*/font-weight: 500;
@@ -207,7 +264,309 @@
                 /*@editable*/padding-top: 10px;
                 /*@editable*/padding-right: 15px;
                 /*@editable*/padding-bottom: 10px;
-                /*@editable*/background-color: #00000013;
+                /*@editable*/background-color: none;
+            }
+
+            /*
+                @tab Body - Movie Section
+                @style Body Image - Movie Section
+            */
+            #movie-table, #movie-table img {
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-bottom: 10px;
+            }
+
+            /*
+                @tab Body - Concert Section
+                @section Body Style - Concert Section
+            */
+            #concert-table {
+                /*@editable*/background-color: #f4f4f6;
+                /*@editable*/background-image: none;
+                /*@editable*/background-position: center;
+                /*@editable*/background-size: cover;
+                /*@editable*/background-repeat: no-repeat;
+                /*@editable*/text-align: center;
+                /*@editable*/border-top: 0px;
+                /*@editable*/border-bottom: 0px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-bottom: 10px;
+            }
+
+            /*
+                @tab Body - Concert Section
+                @section Body Text - Concert Section
+            */
+            #concert-table p {
+                /*@editable*/font-family: 'Helvetica';
+                /*@editable*/font-size: 13px;
+                /*@editable*/font-weight: 500;
+                /*@editable*/line-height: 150%;
+                /*@editable*/text-align: center;
+                /*@editable*/color: #000000;
+                /*@editable*/margin-left: 20px;
+                /*@editable*/margin-right: 20px;
+                /*@editable*/padding-left: 15px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-right: 15px;
+                /*@editable*/padding-bottom: 10px;
+                /*@editable*/background-color: #ffffff;
+            }
+
+            /*
+                @tab Body - Concert Section
+                @section Body Image - Concert Section
+            */
+            #concert-table, #concert-table img {
+                /*@editable*/padding-top: 30px;
+                /*@editable*/padding-bottom: 30px;
+            }
+
+            /*
+                @tab Body - Concert Section - Left Button
+                @section Body Button - Concert Section
+            */
+            #concert-button-left a {
+                /*@editable*/font-family: 'Open Sans', sans-serif;
+                /*@editable*/font-size: 13px;
+                /*@editable*/font-weight: 500;
+                /*@editable*/line-height: 150%;
+                /*@editable*/text-align: center;
+                /*@editable*/text-decoration: none;
+                /*@editable*/color: #45194a;
+                /*@editable*/margin-left: 140px;
+                /*@editable*/margin-top: 20px;
+                /*@editable*/margin-right: 70px;
+                /*@editable*/margin-bottom: 20px;
+                /*@editable*/padding-left: 10px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-right: 10px;
+                /*@editable*/padding-bottom: 10px;
+                /*@editable*/border: 1px solid #45194a;
+                /*@editable*/border-radius: 5%;
+                /*@editable*/background-color: #ffffff;
+                /*@editable*/transition: 0.5s;
+            }
+
+            #concert-button-left a:hover {
+                /*@editable*/color: #ffffff;
+                /*@editable*/background-color: #45194a;
+                /*@editable*/transition: 0.5s;
+            }
+
+            /*
+                @tab Body - Concert Section - Right Button
+                @section Body Button - Concert Section
+            */
+            #concert-button-right a {
+                /*@editable*/font-family: 'Helvetica';
+                /*@editable*/font-size: 13px;
+                /*@editable*/font-weight: 500;
+                /*@editable*/line-height: 150%;
+                /*@editable*/text-align: center;
+                /*@editable*/text-decoration: none;
+                /*@editable*/color: #45194a;
+                /*@editable*/margin-left: 40px;
+                /*@editable*/margin-top: 20px;
+                /*@editable*/margin-right: 140px;
+                /*@editable*/margin-bottom: 20px;
+                /*@editable*/padding-left: 10px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-right: 10px;
+                /*@editable*/padding-bottom: 10px;
+                /*@editable*/border: 1px solid #45194a;
+                /*@editable*/border-radius: 5%;
+                /*@editable*/background-color: #ffffff;
+                /*@editable*/transition: 0.5s;
+            }
+
+            #concert-button-right a:hover {
+                /*@editable*/color: #ffffff;
+                /*@editable*/background-color: #45194a;
+                /*@editable*/transition: 0.5s;
+            }
+
+            /*
+                @tab Body - Show Section
+                @section Body Style - Show Section
+            */
+            #show-table {
+                /*@editable*/background-color: #f4f4f6;
+                /*@editable*/background-image: none;
+                /*@editable*/background-position: center;
+                /*@editable*/background-size: cover;
+                /*@editable*/background-repeat: no-repeat;
+                /*@editable*/text-align: center;
+                /*@editable*/border-top: 0px;
+                /*@editable*/border-bottom: 0px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-bottom: 10px;
+            }
+
+            /*
+                @tab Body - Show Section
+                @section Body Text - Show Section
+            */
+            #show-table p {
+                /*@editable*/font-family: 'Helvetica';
+                /*@editable*/font-size: 13px;
+                /*@editable*/font-weight: 500;
+                /*@editable*/line-height: 150%;
+                /*@editable*/text-align: center;
+                /*@editable*/color: #000000;
+                /*@editable*/margin-left: 20px;
+                /*@editable*/margin-right: 20px;
+                /*@editable*/padding-left: 15px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-right: 15px;
+                /*@editable*/padding-bottom: 10px;
+                /*@editable*/background-color: #ffffff;
+            }
+
+            /*
+                @tab Body - Show Section
+                @section Body Image - Show Section
+            */
+            #show-table, #show-table img {
+                /*@editable*/padding-top: 40px;
+                /*@editable*/padding-bottom: 30px;
+            }
+
+            /*
+                @tab Body - Show Section - Left Button
+                @section Body Button - Show Section
+            */
+            #show-button-left a {
+                /*@editable*/font-family: 'Helvetica';
+                /*@editable*/font-size: 13px;
+                /*@editable*/font-weight: 500;
+                /*@editable*/line-height: 150%;
+                /*@editable*/text-align: center;
+                /*@editable*/text-decoration: none;
+                /*@editable*/color: #ca3a5d;
+                /*@editable*/margin-left: 140px;
+                /*@editable*/margin-top: 20px;
+                /*@editable*/margin-right: 70px;
+                /*@editable*/margin-bottom: 20px;
+                /*@editable*/padding-left: 10px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-right: 10px;
+                /*@editable*/padding-bottom: 10px;
+                /*@editable*/border: 1px solid #ca3a5d;
+                /*@editable*/border-radius: 5%;
+                /*@editable*/background-color: #ffffff;
+                /*@editable*/transition: 0.5s;
+            }
+
+            #show-button-left a:hover {
+                /*@editable*/color: #ffffff;
+                /*@editable*/background-color: #ca3a5d;
+                /*@editable*/transition: 0.5s;
+            }
+
+            /*
+                @tab Body - Show Section - Right Button
+                @section Body Button - Show Section
+            */
+            #show-button-right a {
+                /*@editable*/font-family: 'Helvetica';
+                /*@editable*/font-size: 13px;
+                /*@editable*/font-weight: 500;
+                /*@editable*/line-height: 150%;
+                /*@editable*/text-align: center;
+                /*@editable*/text-decoration: none;
+                /*@editable*/color: #ca3a5d;
+                /*@editable*/margin-left: 40px;
+                /*@editable*/margin-top: 20px;
+                /*@editable*/margin-right: 140px;
+                /*@editable*/margin-bottom: 20px;
+                /*@editable*/padding-left: 10px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-right: 10px;
+                /*@editable*/padding-bottom: 10px;
+                /*@editable*/border: 1px solid #ca3a5d;
+                /*@editable*/border-radius: 5%;
+                /*@editable*/background-color: #ffffff;
+                /*@editable*/transition: 0.5s;
+            }
+
+            #show-button-right a:hover {
+                /*@editable*/color: #ffffff;
+                /*@editable*/background-color: #ca3a5d;
+                /*@editable*/transition: 0.5s;
+            }
+
+            /*
+                @tab Footer
+                @section Footer Style
+            */
+            #footer {
+                /*@editable*/background-color: #1c1c1c;
+                /*@editable*/background-image: none;
+                /*@editable*/background-position: center;
+                /*@editable*/background-size: cover;
+                /*@editable*/background-repeat: no-repeat;
+                /*@editable*/text-align: center;
+                /*@editable*/border-top: 5px solid #5fb284;
+                /*@editable*/border-bottom: 0px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-bottom: 10px;
+            }
+
+            /*
+                @tab Footer
+                @section Footer Text
+            */
+            #footer p {
+                /*@editable*/font-family: 'Helvetica';
+                /*@editable*/font-size: 15px;
+                /*@editable*/font-weight: 500;
+                /*@editable*/line-height: 150%;
+                /*@editable*/text-align: center;
+                /*@editable*/color: #5fb284;
+                /*@editable*/margin-left: 20px;
+                /*@editable*/margin-right: 20px;
+                /*@editable*/padding-left: 15px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-right: 15px;
+                /*@editable*/padding-bottom: 10px;
+            }
+
+            /*
+                @tab Footer
+                @section Footer Link
+            */
+            #footer a {
+                /*@editable*/font-family: 'Helvetica';
+                /*@editable*/font-size: 15px;
+                /*@editable*/font-weight: 500;
+                /*@editable*/line-height: 150%;
+                /*@editable*/text-align: center;
+                /*@editable*/color: #5fb284;
+                /*@editable*/margin-left: 0px;
+                /*@editable*/margin-right: 0px;
+                /*@editable*/padding-left: 5px;
+                /*@editable*/padding-top: 10px;
+                /*@editable*/padding-right: 5px;
+                /*@editable*/padding-bottom: 10px;
+                /*@editable*/transition: 0.5ms;
+            }
+
+            #footer a:hover {
+                /*@editale*/text-decoration: underline;
+                /*@editable*/transition: 0.5ms;
+            }
+
+            /*
+                @tab Footer
+                @section Footer social icons
+            */
+            #footer i {
+                /*@editable*/font-size: 23px;
+                /*@editable*/margin-left: 0px;
+                /*@editable*/margin-right: 0px;
+                /*@editable*/padding-left: 5px;
+                /*@editable*/padding-right: 5px;
             }
 
     </style>
@@ -271,21 +630,20 @@
                                     <table id="header" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 610px;">
                                         <tr>
                                             <td>
-                                                <img src="" alt="KU Arsen" class="newsletter-logo" mc:label="header-image" mc:edit="header-image" mc:allowdesigner mc:allowtext style="max-width: 150px;">
+                                                <h1 mc:edit="header-heading">Svibanj 2021.</h1>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>
+                                                <img src="header-banner.png" alt="KU Arsen" class="newsletter-logo" mc:label="header-image" mc:edit="header-image" mc:allowdesigner mc:allowtext style="max-width: 300px; max-height: 200px;">
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td>
-                                                <h1 mc:edit="header-heading">KU Arsen - Ožujak 2021.</h1>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <p mc:edit="header-info">U ovom mjesecu očekuju nas brojna događanja. Od raznih domaćih kino porjekcija do svjetskih bestsellera kao što su Arija i Labuđe jezero.
-                                                    Glavni događaj mjeseca je premijera predstave "Kako napraviti newsletter" koja na satiričan način pokazuje frustracije web dizajnera, front-end developera te
-                                                    kakvu ulogu u svemu tome imaju mačke. Ne propustite ova zbivanja i podržite domaće snage i domaću scenu.
+                                                <p mc:edit="header-info">U ovom mjesecu očekuju nas brojna događanja. Od raznih domaćih kino projekcija do svjetskih bestsellera kao što su Arija i Labuđe jezero.
+                                                    Glavni događaj mjeseca je premijera predstave "Kako napraviti newsletter".
                                                 </p>
                                             </td>
                                         </tr>
@@ -317,27 +675,118 @@
 
                                         <tr>
                                             <td>
-                                                <a href="#" target="_blank"><img src="" alt="Movie 1 Image" mc:label="movie-image" mc:edit="movie-image" mc:allowdesigner mc:allowtext style="max-width: 425px;"></a>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <a href="#" target="_blank"><img src="" alt="Movie 2 Image" mc:label="movie-image" mc:edit="movie-image" mc:allowdesigner mc:allowtext style="max-width: 425px;"></a>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <a href="#" target="_blank"><img src="" alt="Movie 3 Image" mc:label="movie-image" mc:edit="movie-image" mc:allowdesigner mc:allowtext style="max-width: 425px;"></a>
+                                                <a href="#" target="_blank"><img src="movie.JPG" alt="Movie Image" mc:label="movie-image" mc:edit="movie-image" mc:allowdesigner mc:allowtext style="max-width: 425px;"></a>
                                             </td>
                                         </tr>
                                     </table>
-                                    <!-- // END MODULE: BODY CONTENT -->
+                                    <!-- [if mso]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                    <![endif] -->
                                 </td>
                             </tr>
 
+                            <tr>
+                                <td>
+                                    <!-- [if mso]
+                                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                        <tr>
+                                        <td width="610" style="width: 610px;">
+                                    ![endif] -->
+                                    <table id="concert-table" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 610px;">
+                                        <tr>
+                                            <td colspan="2">
+                                                <img src="concert.JPG" alt="Concert Image" mc:label="concert-image" mc:edit="concert-image" mc:allowdesigner mc:allowtext style="max-width: 425px;">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="center" border="0" id="concert-button-left">
+                                                <a href="#" target="_blank" mc:edit="concert-info">Pročitaj više</a>
+                                            </td>
+                        
+                                            <td align="center" id="concert-button-right">
+                                                <a href="#" target="_blank" mc:edit="concert-ticket">Kupi ulaznicu</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- [if mso]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                    <![endif] -->
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <!-- [if mso]
+                                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                        <tr>
+                                        <td width="610" style="width: 610px;">
+                                    ![endif] -->
+                                    <table id="show-table" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 610px;">
+                                        <tr>
+                                            <td colspan="2">
+                                                <img src="show.JPG" alt="Show Image" mc:label="show-image" mc:edit="show-image" mc:allowdesigner mc:allowtext style="max-width: 425px;">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="center" border="0" id="show-button-left">
+                                                <a mc:edit="show-info" href="#" target="_blank">Pročitaj više</a>
+                                            </td>
+                        
+                                            <td align="center" id="show-button-right">
+                                                <a mc:edit="show-ticket" href="#" target="_blank">Kupi ulaznicu</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- [if mso]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                    <![endif] -->
+                                    <!-- // END MODULE: BODY CONTENT -->
+                                </td>
+                            </tr>
                             <!-- // END BODY -->
+
+                            <!-- BEGIN FOOTER // -->
+                            <tr>
+                                <td>
+                                    <!-- BEGIN MODULE: STANDARD FOOTER // -->
+                                    <!-- [if mso]
+                                        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                        <tr>
+                                        <td width="610" style="width: 610px;">
+                                    ![endif] -->
+                                    <table id="footer" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 610px;">
+                                        <tr>
+                                            <td>
+                                                <p editable align="center">Tvrđava kulture Šibenik</p>
+
+                                                <a href="#" target="_blank" title="Facebook Tvrđava kulture Šibenik"><i class="fab fa-facebook"></i></a>
+                                                <a href="#" target="_blank" title="Instagram Tvrđava kulture Šibenik"><i class="fab fa-instagram"></i></a>
+                                                <a href="#" target="_blank" title="LinkedIn Tvrđava kulture Šibenik"><i class="fab fa-linkedin"></i></a>
+
+                                                <p editable align="center" id="footer-links">
+                                                <a editable href="#">Contact us</a> | <a editable href="#">Privacy policy</a> | <a editable href="#">Unsubscribe</a></p>
+                                                <p editable align="center" id="footer-note">You are receiving Fortress of Culture Newsletter because you have registered with your e-mail address to:
+                                                    <br>Fortress of Culture Newsletter House of Arts Arsen
+                                                    <br><br>&copy; 2021 - Fortress of Culture Šibenik</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- [if mso]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                    <![endif] -->
+                                    <!-- // END MODULE: STANDARD FOOTER -->
+                                </td>
+                            </tr>
                         </table>
                 </td>
             </tr>
